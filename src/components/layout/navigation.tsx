@@ -30,12 +30,6 @@ export function Navigation() {
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
             href="#"
           >
-            About
-          </Link>
-          <Link
-            className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
-          >
             Lore
           </Link>
           <Link
@@ -89,12 +83,6 @@ export function Navigation() {
             href="#"
           >
             Home
-          </Link>
-          <Link
-            className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
-          >
-            About
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
