@@ -11,8 +11,8 @@ export default function Roadmap() {
         "First tipsy selfie - Breaking the internet",
         "Drunk texts the farm group chat - No regrets",
       ],
-      image: "/images/pregame.png",
-      mascotImage: "/assets/pig1.png",
+      image: "/assets/pig1.png",
+      mascotImage: "/assets/beer1.png",
     },
     {
       title: "Phase 2: Getting Wobbly",
@@ -22,8 +22,8 @@ export default function Roadmap() {
         "Starts a dance-off with chickens",
         "Declares eternal friendship with a scarecrow",
       ],
-      image: "/images/party.png",
-      mascotImage: "/assets/pig2.png",
+      image: "/assets/pig5.png",
+      mascotImage: "/assets/beer2.png",
     },
     {
       title: "Phase 3: Peak Party Pig",
@@ -33,8 +33,8 @@ export default function Roadmap() {
         "Creates signature cocktail: The Muddy Snout",
         "Goes viral for beer pong skills",
       ],
-      image: "/images/peak.png",
-      mascotImage: "/assets/pig3.png",
+      image: "/assets/pig3.png",
+      mascotImage: "/assets/beer3.png",
     },
     {
       title: "Phase 4: Living Legend",
@@ -44,8 +44,8 @@ export default function Roadmap() {
         "Writes bestseller: 'Hair of the Hog'",
         "Wakes up wearing farmer's hat - No memory how",
       ],
-      image: "/images/legendary.png",
-      mascotImage: "/assets/pig4.png",
+      image: "/assets/pig2.png",
+      mascotImage: "/assets/beer4.png",
     },
   ];
 
