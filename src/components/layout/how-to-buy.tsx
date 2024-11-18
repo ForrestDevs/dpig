@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { config } from "@/lib/config";
+import Link from "next/link";
 import { useState } from "react";
 
 const buySteps = [
@@ -56,9 +56,12 @@ export default function HowToBuy() {
             </div>
 
             <div className="flex justify-center md:justify-start">
-              <Button className="gap-2 px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold text-pink-500 rounded-full bg-black">
+              <Link
+                href={config.dexUrl}
+                className="gap-2 px-6 md:px-8 py-4 text-base md:text-lg font-semibold text-pink-500 rounded-full bg-black"
+              >
                 Buy {config.ticker} Now
-              </Button>
+              </Link>
             </div>
           </div>
 

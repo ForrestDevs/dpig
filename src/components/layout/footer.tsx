@@ -56,8 +56,8 @@ export default function Footer() {
           </nav>
 
           {/* Social and CTA */}
-          <div className="space-y-6 text-center lg:text-left">
-            <div className="space-y-3">
+          <div className="space-y-10 text-center lg:text-left">
+            <div className="flex flex-col gap-4 space-y-3">
               <h3 className="text-lg font-medium">Follow Us</h3>
               <div className="flex space-x-4 justify-center lg:justify-start">
                 <Link
@@ -79,13 +79,13 @@ export default function Footer() {
                   <span className="sr-only">Telegram</span>
                 </Link>
               </div>
+              <Link
+                href={config.dexUrl}
+                className="w-fit mx-auto lg:mx-0 bg-pink-500 hover:bg-pink-600 text-white rounded-full px-4 py-2"
+              >
+                GET {config.ticker} TODAY
+              </Link>
             </div>
-            <Button
-              className="w-full bg-pink-500 hover:bg-pink-600 text-white rounded-full"
-              size="lg"
-            >
-              GET {config.ticker} TODAY
-            </Button>
           </div>
         </div>
 

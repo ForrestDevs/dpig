@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import Image from "next/image";
 import { config } from "@/lib/config";
 import Link from "next/link";
@@ -28,12 +28,15 @@ export default function Hero() {
             oink, drink drink!
           </p>
           <div className="flex justify-center md:justify-start gap-4 mt-8 flex-wrap">
-            <Button
-              className="text-pink-600 font-bold hover:bg-white/90"
-              size="lg"
+            <Link
+              href={config.dexUrl}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "text-pink-600 font-bold hover:bg-white/90"
+              )}
             >
               Buy {config.ticker}
-            </Button>
+            </Link>
             <Link
               href={config.twitterUrl}
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}

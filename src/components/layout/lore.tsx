@@ -1,5 +1,3 @@
-import { Beer, Share2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { config } from "@/lib/config";
 import VideoEmbed from "./lore.client";
@@ -36,17 +34,6 @@ export default function Component() {
                 <span>BY CRYPTO CHRONICLES</span>
                 <span>•</span>
                 <span>THE DAY EVERYTHING CHANGED</span>
-              </div>
-
-              <div className="flex flex-wrap gap-2 justify-center">
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Share2 className="w-4 h-4" />
-                  Share Story
-                </Button>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Beer className="w-4 h-4" />
-                  Buy {config.ticker}
-                </Button>
               </div>
             </div>
 

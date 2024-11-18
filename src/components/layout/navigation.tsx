@@ -60,10 +60,13 @@ export function Navigation() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="hidden gap-2 px-6 text-white rounded-full lg:flex bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700">
+          <Link
+            href={config.dexUrl}
+            className=" hidden flex-row items-center gap-2 px-6 py-2 text-white rounded-full lg:flex bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"
+          >
             <Wallet className="w-4 h-4" />
             Buy {config.ticker}
-          </Button>
+          </Link>
 
           <Button
             variant="ghost"
@@ -121,13 +124,14 @@ export function Navigation() {
           >
             FAQs
           </Link>
-          <Button
+          <Link
+            href={config.dexUrl}
             className="w-full gap-2 px-6 text-white rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"
             onClick={() => setMobileMenuOpen(false)}
           >
             <Wallet className="w-4 h-4" />
             Buy {config.ticker}
-          </Button>
+          </Link>
         </div>
       )}
     </div>
