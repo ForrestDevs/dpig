@@ -25,7 +25,7 @@ export default function FAQ() {
             />
           </div>
           <h2
-            className="mb-12 text-4xl md:text-5xl font-black tracking-tighter text-white text-center"
+            className="mb-12 text-4xl md:text-5xl font-black tracking-tighter text-black text-center"
             style={{
               textShadow:
                 "2px 2px 0px rgba(0,0,0,0.2), -2px -2px 0px rgba(255,255,255,0.2)",

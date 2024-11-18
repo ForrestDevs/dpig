@@ -20,10 +20,16 @@ export default function Hero() {
         </div>
 
         <div className="order-1 lg:order-2 text-center flex flex-col gap-4 items-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1
+            className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            style={{
+              textShadow:
+                "4px 4px 0px rgba(0,0,0,0.2), -2px -2px 0px rgba(255,255,255,0.2)",
+            }}
+          >
             {config.ticker}
           </h1>
-          <p className="leading-normal text-white/90 sm:text-xl sm:leading-8 mt-4">
+          <p className="leading-normal text-black/90 sm:text-xl sm:leading-8 mt-4 px-6">
             Meet the world&apos;s drunkest pig on the blockchain! Stumbling his
             way to the moon with a beer in hand and dreams in his heart. Oink
             oink, drink drink!

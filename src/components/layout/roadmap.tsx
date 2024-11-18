@@ -50,8 +50,17 @@ export default function Roadmap() {
   ];
 
   return (
-    <section id="roadmap" className="container mx-auto px-8 md:px-16 py-24 max-w-7xl ">
-      <h2 className="mb-16 text-5xl md:text-7xl font-black tracking-tighter text-center text-white">
+    <section
+      id="roadmap"
+      className="container mx-auto px-8 md:px-16 py-24 max-w-7xl "
+    >
+      <h2
+        className="mb-16 text-5xl md:text-7xl font-black tracking-tighter text-center text-white"
+        style={{
+          textShadow:
+            "4px 4px 0px rgba(0,0,0,0.2), -2px -2px 0px rgba(255,255,255,0.2)",
+        }}
+      >
         Roadmap
       </h2>
 
@@ -70,11 +79,11 @@ export default function Roadmap() {
                 width={256}
                 height={256}
               />
-              <h3 className="text-3xl md:text-4xl font-bold text-pink-400">
+              <h3 className="text-3xl md:text-4xl font-bold text-pink-600">
                 {phase.title}
               </h3>
             </div>
-            <ul className="space-y-3 text-xl md:text-2xl text-white/90">
+            <ul className="space-y-3 text-xl md:text-2xl text-black/90">
               {phase.description.map((item, i) => (
                 <li
                   key={i}
