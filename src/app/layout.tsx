@@ -14,8 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Drunk Pig",
-  description: "The memeiest drunk pig on the blockchain.",
+  title: "$STRAWBERRY",
+  description:
+    "Meet the world's drunkest pig on the blockchain! Stumbling his way to the moon with a beer in hand and dreams in his heart. Oink oink, drink drink!",
 };
 
 export default function RootLayout({
