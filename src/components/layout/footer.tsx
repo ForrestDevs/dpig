@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Send, Twitter } from "lucide-react";
 import Image from "next/image";
 import { config } from "@/lib/config";
