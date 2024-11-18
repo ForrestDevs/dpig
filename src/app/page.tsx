@@ -9,14 +9,17 @@ import { Navigation } from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-purple-700 to-purple-900">
+    <div className="relative flex flex-col min-h-screen bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 opacity-90">
+      <div className="absolute inset-0 pointer-events-none before:absolute before:inset-0 before:bg-[url('/noise.webp')] before:opacity-20 before:mix-blend-overlay before:animate-noise -z-1"></div>
       <Navigation />
       <Hero />
       <ScrollingBanner />
       <Lore />
       <ScrollingBanner />
       <Tokenomics />
+      <ScrollingBanner />
       <HowToBuy />
+      <ScrollingBanner />
       <Roadmap />
       <ScrollingBanner />
       <FAQ />

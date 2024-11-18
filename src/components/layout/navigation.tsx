@@ -6,6 +6,7 @@ import { Wallet } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { config } from "@/lib/config";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,45 +15,45 @@ export function Navigation() {
     <div className="sticky top-0 z-50 px-8">
       <nav className="relative flex items-center justify-between w-full px-6 py-4 bg-white rounded-full mx-auto mt-6">
         <Link className="flex items-center gap-2" href="#">
-          <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-900">
-            $DRUNKPIG
+          <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-900">
+            {config.ticker}
           </span>
         </Link>
 
         <div className="hidden gap-8 lg:flex">
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#home"
           >
             Home
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#lore"
           >
             Lore
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#tokenomics"
           >
             Tokenomics
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#how-to-buy"
           >
             How to Buy
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#roadmap"
           >
             Roadmap
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#"
+            href="#faq"
           >
             FAQs
           </Link>
@@ -61,7 +62,7 @@ export function Navigation() {
         <div className="flex items-center gap-4">
           <Button className="hidden gap-2 px-6 text-white rounded-full lg:flex bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700">
             <Wallet className="w-4 h-4" />
-            Buy $DRUNKPIG
+            Buy {config.ticker}
           </Button>
 
           <Button
@@ -77,46 +78,55 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="absolute left-0 right-0 p-4 mt-2 space-y-2 bg-white rounded-lg shadow-lg md:hidden">
+        <div className="absolute left-0 right-0 p-4 mt-2 space-y-2 bg-white rounded-xl shadow-lg lg:hidden mx-10">
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#home"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#lore"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Lore
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#tokenomics"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Tokenomics
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#how-to-buy"
+            onClick={() => setMobileMenuOpen(false)}
           >
             How to Buy
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#roadmap"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Roadmap
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#"
+            href="#faqa"
+            onClick={() => setMobileMenuOpen(false)}
           >
             FAQs
           </Link>
-          <Button className="w-full gap-2 px-6 text-white rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700">
+          <Button
+            className="w-full gap-2 px-6 text-white rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <Wallet className="w-4 h-4" />
-            Buy $DRUNKPIG
+            Buy {config.ticker}
           </Button>
         </div>
       )}

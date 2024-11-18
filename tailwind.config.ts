@@ -60,6 +60,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 20s linear infinite",
+        noise: "noise 0.4s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -84,7 +85,36 @@ export default {
           },
           "100%": {
             transform: "translateX(-100%)",
-          }
+          },
+        },
+        noise: {
+          "0%": {
+            "background-position": "0rem center",
+          },
+          "24%": {
+            "background-position": "0rem center",
+          },
+          "25%": {
+            "background-position": "15rem center",
+          },
+          "49%": {
+            "background-position": "15rem center",
+          },
+          "50%": {
+            "background-position": "30rem center",
+          },
+          "74%": {
+            "background-position": "30rem center",
+          },
+          "75%": {
+            "background-position": "45rem center",
+          },
+          "99%": {
+            "background-position": "45rem center",
+          },
+          "100%": {
+            "background-position": "0rem center",
+          },
         },
       },
     },

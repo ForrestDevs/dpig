@@ -1,71 +1,103 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 export default function Roadmap() {
+  const roadmapPhases = [
+    {
+      title: "Phase 1: The First Beer",
+      description: [
+        "Discovers craft beer - A whole new world opens up",
+        "Learns to open bottles with hooves - True innovation",
+        "First tipsy selfie - Breaking the internet",
+        "Drunk texts the farm group chat - No regrets",
+      ],
+      image: "/images/pregame.png",
+      mascotImage: "/assets/pig1.png",
+    },
+    {
+      title: "Phase 2: Getting Wobbly",
+      description: [
+        "Attempts karaoke - Oinking to Sweet Caroline",
+        "Drunk orders pizza for the whole barn",
+        "Starts a dance-off with chickens",
+        "Declares eternal friendship with a scarecrow",
+      ],
+      image: "/images/party.png",
+      mascotImage: "/assets/pig2.png",
+    },
+    {
+      title: "Phase 3: Peak Party Pig",
+      description: [
+        "Crowd surfs at the county fair",
+        "Becomes local pub's VIP member",
+        "Creates signature cocktail: The Muddy Snout",
+        "Goes viral for beer pong skills",
+      ],
+      image: "/images/peak.png",
+      mascotImage: "/assets/pig3.png",
+    },
+    {
+      title: "Phase 4: Living Legend",
+      description: [
+        "Opens first pig-owned brewery",
+        "Stars in 'The Hangover: Farm Edition'",
+        "Writes bestseller: 'Hair of the Hog'",
+        "Wakes up wearing farmer's hat - No memory how",
+      ],
+      image: "/images/legendary.png",
+      mascotImage: "/assets/pig4.png",
+    },
+  ];
+
   return (
-    <section className="container py-24">
-      <h2 className="mb-16 text-5xl font-black tracking-tighter text-center text-white">
+    <section id="roadmap" className="container mx-auto px-8 md:px-16 py-24 max-w-7xl ">
+      <h2 className="mb-16 text-5xl md:text-7xl font-black tracking-tighter text-center text-white">
         Roadmap
       </h2>
 
-      {/* Phase 1 */}
-      <div className="grid items-center gap-12 mb-24 md:grid-cols-2">
-        <div className="order-2 md:order-1">
-          <h3 className="mb-4 text-3xl font-bold text-pink-400">Phase 1: The Pre-Game</h3>
-          <ul className="space-y-3 text-xl text-white/90">
-            <li>• Website Launch</li>
-            <li>• Social Media Setup</li>
-            <li>• Community Building</li>
-            <li>• Initial Marketing Push</li>
-          </ul>
-        </div>
-        <div className="order-1 md:order-2">
-          <img 
-            src="/images/pregame.png" 
-            alt="Pre-game phase"
-            className="w-full rounded-2xl shadow-2xl"
-          />
-        </div>
-      </div>
+      {roadmapPhases.map((phase, index) => (
+        <div
+          key={phase.title}
+          className="grid items-center gap-8 md:gap-12 mb-16 md:mb-24 md:grid-cols-2"
+        >
+          {/* Content section */}
+          <div className={`space-y-6 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+            <div className="flex items-center gap-4">
+              <Image
+                src={phase.mascotImage}
+                alt="DPIG mascot"
+                className="w-16 h-16 object-contain"
+                width={256}
+                height={256}
+              />
+              <h3 className="text-3xl md:text-4xl font-bold text-pink-400">
+                {phase.title}
+              </h3>
+            </div>
+            <ul className="space-y-3 text-xl md:text-2xl text-white/90">
+              {phase.description.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-2 list-disc before:content-['•'] before:mr-2"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      {/* Phase 2 */}
-      <div className="grid items-center gap-12 mb-24 md:grid-cols-2">
-        <div>
-          <img 
-            src="/images/happy-hour.png" 
-            alt="Happy hour phase"
-            className="w-full rounded-2xl shadow-2xl"
-          />
+          {/* Image section */}
+          <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
+            <Image
+              src={phase.image}
+              alt={`${phase.title} phase`}
+              className="w-3/4 mx-auto rounded-2xl shadow-2xl"
+              width={1024}
+              height={1024}
+            />
+          </div>
         </div>
-        <div>
-          <h3 className="mb-4 text-3xl font-bold text-pink-400">Phase 2: Happy Hour</h3>
-          <ul className="space-y-3 text-xl text-white/90">
-            <li>• CoinGecko & CMC Listings</li>
-            <li>• Trending on Twitter/X</li>
-            <li>• NFT Collection Launch</li>
-            <li>• CEX Listings</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Phase 3 */}
-      <div className="grid items-center gap-12 md:grid-cols-2">
-        <div className="order-2 md:order-1">
-          <h3 className="mb-4 text-3xl font-bold text-pink-400">Phase 3: After Party</h3>
-          <ul className="space-y-3 text-xl text-white/90">
-            <li>• $DPIG Merchandise</li>
-            <li>• Mobile Game Development</li>
-            <li>• Major Exchange Listings</li>
-            <li>• Global Marketing Campaign</li>
-          </ul>
-        </div>
-        <div className="order-1 md:order-2">
-          <img 
-            src="/images/after-party.png" 
-            alt="After party phase"
-            className="w-full rounded-2xl shadow-2xl"
-          />
-        </div>
-      </div>
+      ))}
     </section>
-  )
+  );
 }

@@ -1,30 +1,28 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Send, Twitter } from "lucide-react";
-
+import Image from "next/image";
+import { config } from "@/lib/config";
 export default function Footer() {
   return (
     <footer className="relative bg-black text-white">
-      <div className="container px-4 py-12">
+      <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Logo and Mascot Section */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 justify-center lg:justify-start">
             <div className="relative w-32 h-32">
-              <img
+              <Image
                 alt="DPIG Mascot"
                 className="object-contain"
-                height={128}
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "1/1",
-                }}
-                width={128}
+                src="/BuyGif.gif"
+                width={200}
+                height={200}
               />
             </div>
           </div>
 
           {/* Navigation Links */}
-          <nav className="grid grid-cols-2 gap-4 lg:gap-8 text-sm lg:text-base">
+          <nav className="grid grid-cols-2 gap-4 lg:gap-8 text-sm lg:text-base text-center lg:text-left">
             <Link
               className="hover:text-pink-500 transition-colors"
               href="#lore"
@@ -58,12 +56,12 @@ export default function Footer() {
           </nav>
 
           {/* Social and CTA */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center lg:text-left">
             <div className="space-y-3">
               <h3 className="text-lg font-medium">Follow Us</h3>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center lg:justify-start">
                 <Link
-                  href="https://twitter.com/dpig"
+                  href={config.twitterUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -72,7 +70,7 @@ export default function Footer() {
                   <span className="sr-only">Twitter</span>
                 </Link>
                 <Link
-                  href="https://t.me/dpig"
+                  href={config.telegramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -86,19 +84,15 @@ export default function Footer() {
               className="w-full bg-pink-500 hover:bg-pink-600 text-white rounded-full"
               size="lg"
             >
-              GET $DPIG TODAY
+              GET {config.ticker} TODAY
             </Button>
           </div>
         </div>
 
         {/* Contract Address */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="text-xs font-mono text-white/60 break-all">
-            Contract:
-            0xMinipool2routerMint.CihjDh2tUGqbAbxKCmxKd7ssMsvMaWecFBBZNeNZpump
-          </div>
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col items-center">
           <div className="mt-4 text-sm text-white/60">
-            © 2024 $DPIG. All rights piggerved.
+            © 2024 {config.ticker}. All rights piggerved.
           </div>
         </div>
       </div>
