@@ -70,7 +70,7 @@ export default function Roadmap() {
           className="grid items-center gap-8 md:gap-12 mb-16 md:mb-24 md:grid-cols-2"
         >
           {/* Content section */}
-          <div className={`space-y-6 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+          <div className={`space-y-6 ${index % 2 === 1 ? "md:order-2" : ""} rounded-2xl shadow-2xl p-6 bg-slate-200/20`}>
             <div className="flex items-center gap-4">
               <Image
                 src={phase.mascotImage}

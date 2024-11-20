@@ -87,13 +87,6 @@ export default function Component() {
                     <div className="text-sm text-gray-500">Meme Potential</div>
                   </div>
                 </div>
-
-                <p className="text-center">
-                  Today, {config.ticker} stands as a testament to those
-                  unexpected moments that bring the crypto community together.
-                  With every buy, sell, and transfer, we raise a virtual toast
-                  to the pig that showed us how to truly live in the moment.
-                </p>
               </div>
             </div>
           </CardContent>
