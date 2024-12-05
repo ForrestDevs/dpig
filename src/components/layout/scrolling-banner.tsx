@@ -1,12 +1,12 @@
 import React from "react";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 
 export default function ScrollingBanner() {
   return (
     <div className="relative w-full overflow-hidden bg-black py-4">
       <div className="animate-scroll-left whitespace-nowrap">
         {Array(32)
-          .fill(config.ticker)
+          .fill(info.ticker)
           .map((text, index) => (
             <span
               key={index}

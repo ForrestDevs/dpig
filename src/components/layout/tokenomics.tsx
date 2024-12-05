@@ -2,14 +2,14 @@
 
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 import Image from "next/image";
 
 export default function Tokenomics() {
   const [copied, setCopied] = useState(false);
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(config.contractAddress);
+      await navigator.clipboard.writeText(info.contractAddress);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -91,7 +91,7 @@ export default function Tokenomics() {
             <div className="mt-8 flex items-center gap-2">
               <div className="flex-1 p-4 bg-white/90 backdrop-blur rounded-full shadow-lg">
                 <code className="text-sm sm:text-base font-mono break-all">
-                  {config.contractAddress}
+                  {info.contractAddress}
                 </code>
               </div>
               <button

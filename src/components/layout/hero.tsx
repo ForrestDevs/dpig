@@ -1,7 +1,7 @@
 import React from "react";
 import { buttonVariants } from "../ui/button";
 import Image from "next/image";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +20,7 @@ export default function Hero() {
                 "4px 4px 0px rgba(0,0,0,0.2), -2px -2px 0px rgba(255,255,255,0.2)",
             }}
           >
-            {config.ticker}
+            {info.ticker}
           </h1>
           <p className="leading-normal text-black/90 sm:text-2xl sm:leading-8 mt-4">
             Meet the world&apos;s drunkest pig on the blockchain! Stumbling his
@@ -29,17 +29,17 @@ export default function Hero() {
           </p>
           <div className="flex justify-center md:justify-start gap-4 mt-8 flex-wrap">
             <Link
-              href={config.dexUrl}
+              href={info.dexUrl}
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "text-pink-600 font-bold hover:bg-white/90"
               )}
             >
-              Buy {config.ticker}
+              Buy {info.ticker}
             </Link>
             <div className="flex flex-row gap-4">
               <Link
-                href={config.twitterUrl}
+                href={info.twitterUrl}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" })
                 )}
@@ -55,7 +55,7 @@ export default function Hero() {
                 </svg>
               </Link>
               <Link
-                href={config.telegramUrl}
+                href={info.telegramUrl}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" })
                 )}

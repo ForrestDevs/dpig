@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 import VideoEmbed from "./lore.client";
 
 export default function Component() {
@@ -13,7 +13,7 @@ export default function Component() {
               "4px 4px 0px rgba(0,0,0,0.2), -2px -2px 0px rgba(255,255,255,0.2)",
           }}
         >
-          The Legend of {config.ticker}
+          The Legend of {info.ticker}
         </h2>
 
         <Card className="overflow-hidden bg-white rounded-3xl">
@@ -26,8 +26,8 @@ export default function Component() {
               </div>
 
               <h3 className="text-2xl md:text-4xl font-black tracking-tight text-center">
-                {config.ticker} Goes Viral After Epic Beer Adventure: The Birth
-                of {config.ticker}
+                {info.ticker} Goes Viral After Epic Beer Adventure: The Birth
+                of {info.ticker}
               </h3>
 
               <div className="flex items-center justify-center gap-4 text-sm text-gray-500 flex-wrap">
@@ -60,7 +60,7 @@ export default function Component() {
 
                 <p className="text-center">
                   This legendary incident sparked the creation of{" "}
-                  {config.ticker} - a token that celebrates the joy,
+                  {info.ticker} - a token that celebrates the joy,
                   spontaneity, and slightly wobbly path of our beloved porcine
                   pioneer. Every transaction carries the spirit of that fateful
                   day when a pig decided to turn a regular garage into the most

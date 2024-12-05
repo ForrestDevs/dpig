@@ -2,7 +2,7 @@ import FAQ from "@/components/layout/faq";
 import Hero from "@/components/layout/hero";
 import HowToBuy from "@/components/layout/how-to-buy";
 import ScrollingBanner from "@/components/layout/scrolling-banner";
-import Tokenomics from "@/components/layout/tokenomics";
+// import Tokenomics from "@/components/layout/tokenomics";
 import Roadmap from "@/components/layout/roadmap";
 import Lore from "@/components/layout/lore";
 import { Navigation } from "@/components/layout/navigation";
@@ -16,8 +16,8 @@ export default function Home() {
       <ScrollingBanner />
       <Lore />
       <ScrollingBanner />
-      <Tokenomics />
-      <ScrollingBanner />
+      {/* <Tokenomics /> */}
+      {/* <ScrollingBanner /> */}
       <HowToBuy />
       <ScrollingBanner />
       <Roadmap />

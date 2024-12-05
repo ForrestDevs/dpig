@@ -6,7 +6,7 @@ import { Wallet } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export function Navigation() {
       <nav className="relative flex items-center justify-between w-full px-6 py-4 bg-white rounded-full mx-auto mt-6">
         <Link className="flex items-center gap-2" href="#">
           <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-900">
-            {config.ticker}
+            {info.ticker}
           </span>
         </Link>
 
@@ -61,11 +61,11 @@ export function Navigation() {
 
         <div className="flex items-center gap-4">
           <Link
-            href={config.dexUrl}
+            href={info.dexUrl}
             className=" hidden flex-row items-center gap-2 px-6 py-2 text-white rounded-full lg:flex bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"
           >
             <Wallet className="w-4 h-4" />
-            Buy {config.ticker}
+            Buy {info.ticker}
           </Link>
 
           <Button
@@ -125,12 +125,12 @@ export function Navigation() {
             FAQs
           </Link>
           <Link
-            href={config.dexUrl}
+            href={info.dexUrl}
             className="w-full gap-2 px-6 text-white rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"
             onClick={() => setMobileMenuOpen(false)}
           >
             <Wallet className="w-4 h-4" />
-            Buy {config.ticker}
+            Buy {info.ticker}
           </Link>
         </div>
       )}

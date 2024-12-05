@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 import { Plus, X } from "lucide-react";
 import Image from "next/image";
 
@@ -39,29 +39,29 @@ export default function FAQ() {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="border-0">
               <AccordionTrigger className="flex gap-4 p-6 text-xl font-bold text-left bg-white rounded-[32px] hover:no-underline group">
-                What is {config.ticker}?
+                What is {info.ticker}?
                 <div className="ml-auto">
                   <X className="w-6 h-6 hidden group-data-[state=open]:block" />
                   <Plus className="w-6 h-6 block group-data-[state=open]:hidden" />
                 </div>
               </AccordionTrigger>
               <AccordionContent className="mt-2 p-6 bg-white rounded-[32px] text-lg">
-                A {config.ticker} is not just a what, it&apos;s a who, a why,
-                and sometimes a where! {config.ticker} is the embodiment of
+                A {info.ticker} is not just a what, it&apos;s a who, a why,
+                and sometimes a where! {info.ticker} is the embodiment of
                 crypto chaos and cuddly confusion!
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2" className="border-0">
               <AccordionTrigger className="flex gap-4 p-6 text-xl font-bold text-left bg-white rounded-[32px] hover:no-underline group">
-                Is {config.ticker} a serious investment?
+                Is {info.ticker} a serious investment?
                 <div className="ml-auto">
                   <X className="w-6 h-6 hidden group-data-[state=open]:block" />
                   <Plus className="w-6 h-6 block group-data-[state=open]:hidden" />
                 </div>
               </AccordionTrigger>
               <AccordionContent className="mt-2 p-6 bg-white rounded-[32px] text-lg">
-                While we love to have fun, {config.ticker} is built on solid
+                While we love to have fun, {info.ticker} is built on solid
                 fundamentals and a strong community. However, always do your own
                 research and invest responsibly!
               </AccordionContent>
@@ -76,7 +76,7 @@ export default function FAQ() {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="mt-2 p-6 bg-white rounded-[32px] text-lg">
-                The Piggening is our community event where {config.ticker}{" "}
+                The Piggening is our community event where {info.ticker}{" "}
                 holders come together to celebrate, share memes, and participate
                 in exclusive rewards programs!
               </AccordionContent>
@@ -84,7 +84,7 @@ export default function FAQ() {
 
             <AccordionItem value="item-4" className="border-0">
               <AccordionTrigger className="flex gap-4 p-6 text-xl font-bold text-left bg-white rounded-[32px] hover:no-underline group">
-                How do I join the {config.ticker} community?
+                How do I join the {info.ticker} community?
                 <div className="ml-auto">
                   <X className="w-6 h-6 hidden group-data-[state=open]:block" />
                   <Plus className="w-6 h-6 block group-data-[state=open]:hidden" />
@@ -92,13 +92,13 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent className="mt-2 p-6 bg-white rounded-[32px] text-lg">
                 Join our Discord, follow us on Twitter, and of course, grab some{" "}
-                {config.ticker} tokens to become part of our amazing community!
+                {info.ticker} tokens to become part of our amazing community!
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5" className="border-0">
               <AccordionTrigger className="flex gap-4 p-6 text-xl font-bold text-left bg-white rounded-[32px] hover:no-underline group">
-                What&apos;s next on the {config.ticker} roadmap?
+                What&apos;s next on the {info.ticker} roadmap?
                 <div className="ml-auto">
                   <X className="w-6 h-6 hidden group-data-[state=open]:block" />
                   <Plus className="w-6 h-6 block group-data-[state=open]:hidden" />

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Send, Twitter } from "lucide-react";
 import Image from "next/image";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 export default function Footer() {
   return (
     <footer className="relative bg-black text-white">
@@ -60,7 +60,7 @@ export default function Footer() {
               <h3 className="text-lg font-medium">Follow Us</h3>
               <div className="flex space-x-4 justify-center lg:justify-start">
                 <Link
-                  href={config.twitterUrl}
+                  href={info.twitterUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -69,7 +69,7 @@ export default function Footer() {
                   <span className="sr-only">Twitter</span>
                 </Link>
                 <Link
-                  href={config.telegramUrl}
+                  href={info.telegramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -79,10 +79,10 @@ export default function Footer() {
                 </Link>
               </div>
               <Link
-                href={config.dexUrl}
+                href={info.dexUrl}
                 className="w-fit mx-auto lg:mx-0 bg-pink-500 hover:bg-pink-600 text-white rounded-full px-4 py-2"
               >
-                GET {config.ticker} TODAY
+                GET {info.ticker} TODAY
               </Link>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Footer() {
         {/* Contract Address */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col items-center">
           <div className="mt-4 text-sm text-white/60">
-            © 2024 {config.ticker}. All rights piggerved.
+            © 2024 {info.ticker}. All rights piggerved.
           </div>
         </div>
       </div>

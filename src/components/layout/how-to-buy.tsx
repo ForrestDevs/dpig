@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { config } from "@/lib/config";
+import { info } from "@/lib/info";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -51,16 +51,16 @@ export default function HowToBuy() {
                 className="text-4xl md:text-5xl font-black tracking-tighter text-white"
                 style={{ textShadow: "2px 2px 0px rgba(0,0,0,0.2)" }}
               >
-                {config.ticker}?
+                {info.ticker}?
               </h3>
             </div>
 
             <div className="flex justify-center md:justify-start">
               <Link
-                href={config.dexUrl}
+                href={info.dexUrl}
                 className="gap-2 px-6 md:px-8 py-4 text-base md:text-lg font-semibold text-pink-500 rounded-full bg-black"
               >
-                Buy {config.ticker} Now
+                Buy {info.ticker} Now
               </Link>
             </div>
           </div>

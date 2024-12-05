@@ -1,4 +1,4 @@
-export const config = {
+export const info = {
   title: "Strawberry Coin",
   description: "The world's first and only strawberry-themed token",
   twitter: "@strawberrycoinsol",
