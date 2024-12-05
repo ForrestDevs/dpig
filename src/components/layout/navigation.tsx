@@ -35,12 +35,6 @@ export function Navigation() {
           </Link>
           <Link
             className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-            href="#tokenomics"
-          >
-            Tokenomics
-          </Link>
-          <Link
-            className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
             href="#how-to-buy"
           >
             How to Buy
@@ -95,13 +89,6 @@ export function Navigation() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Lore
-          </Link>
-          <Link
-            className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            href="#tokenomics"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Tokenomics
           </Link>
           <Link
             className="block p-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"

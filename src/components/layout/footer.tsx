@@ -30,12 +30,6 @@ export default function Footer() {
             </Link>
             <Link
               className="hover:text-pink-500 transition-colors"
-              href="#tokenomics"
-            >
-              Tokenomics
-            </Link>
-            <Link
-              className="hover:text-pink-500 transition-colors"
               href="#how-to-buy"
             >
               How to Buy
